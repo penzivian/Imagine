@@ -17,7 +17,7 @@ const Card = ({ _id, name, prompt, photo }) => {
     const getLikes = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/api/v1/likes/${_id}`
+          `https://ai-image-generator-2-0-six.vercel.app/api/v1/likes/${_id}`
         );
         setLikes(data.message.length);
       } catch (error) {
@@ -28,7 +28,7 @@ const Card = ({ _id, name, prompt, photo }) => {
     const getComments = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:8080/api/v1/comments/${_id}`
+          `https://ai-image-generator-2-0-six.vercel.app/api/v1/comments/${_id}`
         );
         setComments(data.message);
       } catch (error) {
@@ -44,7 +44,7 @@ const Card = ({ _id, name, prompt, photo }) => {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `http://localhost:8080/api/v1/likes/${_id}`,
+        `https://ai-image-generator-2-0-six.vercel.app/api/v1/likes/${_id}`,
         {
           method: "PATCH",
           headers: {
@@ -79,7 +79,7 @@ const Card = ({ _id, name, prompt, photo }) => {
         alert("Comment is empty");
       } else {
         const response = await fetch(
-          `http://localhost:8080/api/v1/comments/${_id}`,
+          `https://ai-image-generator-2-0-six.vercel.app/api/v1/comments/${_id}`,
           {
             method: "PATCH",
             headers: {
