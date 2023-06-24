@@ -14,7 +14,8 @@ const Navbar = ({checkLogin, setCheckLogin, name, email}) => {
     <>
       <header className="w-full flex justify-between items-center bg-white sm:px-8 pb-4 border-b border-b-[#e6ebf4]">
         <Link to="/">
-          <img src={logo} alt="logo" className="w-28 object-contain" />
+          {/* <img src={logo} alt="logo" className="w-28 object-contain" /> */}
+          <h1 className="font-sans text-3xl font-bold text-slate-500 hover:text-black italic ">IMAGINE</h1>
         </Link>
 
         <div className="flex">
